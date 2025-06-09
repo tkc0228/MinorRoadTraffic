@@ -4,12 +4,14 @@
 \alias{road_centrality}
 \title{Calculate centrality of minor roads}
 \usage{
-road_centrality(lines, threshold = 5)
+road_centrality(lines, threshold = 5, parallel = FALSE)
 }
 \arguments{
 \item{lines}{road network}
 
 \item{threshold}{minimum number of minor roads to include in a zone, default 5}
+\item{parallel}{logical. If TRUE each zone is processed in parallel using\cr
+  \code{future.apply}.}
 }
 \description{
 Calculate centrality of minor roads
